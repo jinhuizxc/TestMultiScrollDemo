@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <com.jinhui.testmultiscrolldemo.view.JudgeNestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentScrim="?attr/colorPrimary"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                    app:titleEnabled="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="200dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/mainWhite"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/eleven"
+                                android:gravity="center"
+                                android:text="SiberiaDante"
+                                android:textColor="@color/mainBlack"
+                                android:textSize="@dimen/font_21"
+                                android:textStyle="bold" />
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/mainGrayF8"
+                                android:paddingBottom="@dimen/seventeen"
+                                android:paddingEnd="@dimen/forty_two"
+                                android:paddingStart="@dimen/forty_two"
+                                android:paddingTop="@dimen/eight">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/UserCenterIntegralTextView"
+                                        android:drawableStart="@drawable/icon_prestige"
+                                        android:text="@string/prestige" />
+
+                                    <TextView
+                                        android:id="@+id/tv_prestige"
+                                        style="@style/UserCenterIntegralNumTextView"
+                                        android:text="12000" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/UserCenterIntegralTextView"
+                                        android:drawableStart="@drawable/icon_friendliness"
+                                        android:text="@string/friendliness" />
+
+                                    <TextView
+                                        android:id="@+id/tv_friendliness"
+                                        style="@style/UserCenterIntegralNumTextView"
+                                        android:text="12000" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/twelve"
+                                android:paddingEnd="@dimen/sixteen"
+                                android:paddingStart="@dimen/sixteen"
+                                android:paddingTop="@dimen/twelve">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/interest_label"
+                                    android:textColor="@color/mainBlack"
+                                    android:textSize="@dimen/font_15" />
+
+
+                            </LinearLayout>
+
+                            <View style="@style/LineEight" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+            </LinearLayout>
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty_eight"
+                android:layout_gravity="bottom"
+                android:background="@color/mainWhite" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray" />
+        </LinearLayout>
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    </com.jinhui.testmultiscrolldemo.view.JudgeNestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+        </LinearLayout>
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--style="@style/AppTheme.Toolbar"-->
+        <!--android:layout_marginBottom="0dp"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--app:layout_collapseMode="pin">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_back"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/back_white" />-->
+
+
+        <!--<android.support.v7.widget.ButtonBarLayout-->
+        <!--android:id="@+id/buttonBarLayout"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center">-->
+
+        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:id="@+id/toolbar_avatar"-->
+        <!--style="@style/UserTitleAvatar"-->
+        <!--android:src="@drawable/timg" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/toolbar_username"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:maxLines="1"-->
+        <!--android:text="SiberiaDante"-->
+        <!--android:textColor="@color/mainBlack"-->
+        <!--android:textSize="@dimen/font_16" />-->
+
+
+        <!--</android.support.v7.widget.ButtonBarLayout>-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_menu"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="end"-->
+        <!--android:src="@drawable/icon_menu_white" />-->
+        <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.Toolbar>-->
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/magic_indicator_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thirty_eight"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/mainWhite"
+            android:visibility="gone"
+            app:layout_collapseMode="pin" />
+    </RelativeLayout>
+
+
+</FrameLayout>
